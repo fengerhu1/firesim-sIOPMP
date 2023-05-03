@@ -1,0 +1,7 @@
+{
+    "benchmark_name"            : "example-fed-qsort",
+    "common_bootbinary"         : "example-fed-qsort-bin",
+    "common_rootfs"             : "example-fed-qsort.img",
+    "common_outputs"            : ["/etc/os-release", "/root/run_result.csv"],
+    "common_simulation_outputs" : ["uartlog",  "memory_stats*.csv"]
+  }

@@ -165,10 +165,10 @@ def aws_resource_names() -> Dict[str, Any]:
     base_dict = {
         'tutorial_mode'  :   False,
         # regular users are instructed to create these in the setup instructions
-        'vpcname':           'firesim',
-        'securitygroupname': 'firesim',
+        'vpcname':           'dd-firesim',
+        'securitygroupname': 'dd-firesim',
         # regular users are instructed to create a key named `firesim` in the wiki
-        'keyname':           'firesim',
+        'keyname':           'dd-test',
         's3bucketname' :     None,
         'snsname'      :     'FireSim',
         'runfarmprefix':     None,
