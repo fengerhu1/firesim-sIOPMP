@@ -1,7 +1,7 @@
 {
-    "benchmark_name"            : "example-fed-qsort",
-    "common_bootbinary"         : "fw_payload.elf",
-    "common_rootfs"             : "rootfs.bin",
-    "common_outputs"            : ["/etc/os-release"],
-    "common_simulation_outputs" : ["uartlog",  "memory_stats*.csv"]
-  }
+  "benchmark_name"            : "example-fed-qsort",
+  "common_bootbinary"         : "fedora-base-bin",
+  "common_rootfs"             : "fedora-base.img",
+  "common_outputs"            : ["/etc/os-release", "/root/run_result.csv"],
+  "common_simulation_outputs" : ["uartlog",  "memory_stats*.csv"]
+}
