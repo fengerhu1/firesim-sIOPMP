@@ -69,11 +69,11 @@ def do_plotting(filename, comparison):
 
     print(df)
     ax = df.plot(kind='scatter', x='QPS', y='4-thread-50th', marker='s', label='4 threads, 50th percentile', c=colors_to_use[0])
-    df.plot(kind='scatter', x='QPS', y='4-thread-pinned-50th', marker='o', label='4 threads pinned, 50th percentile', c=colors_to_use[1], ax=ax)
-    df.plot(kind='scatter', x='QPS', y='5-thread-50th', marker='x', label='5 threads, 50th percentile', c=colors_to_use[2], ax=ax)
+    #df.plot(kind='scatter', x='QPS', y='4-thread-pinned-50th', marker='o', label='4 threads pinned, 50th percentile', c=colors_to_use[1], ax=ax)
+    #df.plot(kind='scatter', x='QPS', y='5-thread-50th', marker='x', label='5 threads, 50th percentile', c=colors_to_use[2], ax=ax)
     df.plot(kind='scatter', x='QPS', y='4-thread-' + comparison, marker='D', label='4 threads, ' + comparison + ' percentile', c=colors_to_use[3], ax=ax)
-    df.plot(kind='scatter', x='QPS', y='4-thread-pinned-' + comparison, marker='+', label='4 threads pinned, ' + comparison + ' percentile', c=colors_to_use[4], ax=ax)
-    df.plot(kind='scatter', x='QPS', y='5-thread-' + comparison, marker='^', label='5 threads, ' + comparison + ' percentile', c=colors_to_use[5], ax=ax)
+    #df.plot(kind='scatter', x='QPS', y='4-thread-pinned-' + comparison, marker='+', label='4 threads pinned, ' + comparison + ' percentile', c=colors_to_use[4], ax=ax)
+    #df.plot(kind='scatter', x='QPS', y='5-thread-' + comparison, marker='^', label='5 threads, ' + comparison + ' percentile', c=colors_to_use[5], ax=ax)
     ax.set_xlabel("Queries Per Second", size='10')
     ax.set_ylabel(r'Request Latency ($\mu$s)', size='10')
     ax.grid(linestyle='-', linewidth=0.3)
@@ -84,15 +84,15 @@ def do_plotting(filename, comparison):
 
 def full_script(percentilecompare):
     fname1 = starterpath + "/mutilatemaster-4/uartlog"
-    fname2 = starterpath + "/mutilatemaster-5/uartlog"
-    fname3 = starterpath + "/mutilatemaster-4-pinned/uartlog"
+    #fname2 = starterpath + "/mutilatemaster-5/uartlog"
+    #fname3 = starterpath + "/mutilatemaster-4-pinned/uartlog"
     first95 = file_to_rows(fname1, 0, 4, percentilecompare)
-    second95 = file_to_rows(fname2, 2, 2, percentilecompare)
-    third95 = file_to_rows(fname3, 4, 0, percentilecompare)
+    #second95 = file_to_rows(fname2, 2, 2, percentilecompare)
+    #third95 = file_to_rows(fname3, 4, 0, percentilecompare)
 
-    header = [["QPS", "4-thread-50th", "4-thread-" + percentilecompare, "5-thread-50th", "5-thread-" + percentilecompare, "4-thread-pinned-50th", "4-thread-pinned-" + percentilecompare, ]]
+    header = [["QPS", "4-thread-50th", "4-thread-" + percentilecompare]]#, "5-thread-50th", "5-thread-" + percentilecompare, "4-thread-pinned-50th", "4-thread-pinned-" + percentilecompare, ]]
 
-    write_it = header + first95 + second95 + third95
+    write_it = header + first95# + second95 + third95
 
     write_csv_rows(starterpath + percentilecompare + "comparison", write_it)
 
