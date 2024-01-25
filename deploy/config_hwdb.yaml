@@ -79,14 +79,35 @@ firesim_rocket_nPMP32_nSID_64_nMD63_12-25:
     agfi: agfi-0808f261fcfe9c375
     deploy_triplet_override: null
     custom_runtime_config: null
-
+# cannot work
 firesim_rocket_nPMP256_nSID64_nMD63_pipeline1_12-26:
     agfi: agfi-00050aa6fe7f2285f
     deploy_triplet_override: null
     custom_runtime_config: null
-
+# can work
 firesim_rocket_nPMP256_nSID64_nMD63_pipeline0_12-27:
     agfi: agfi-02879bc5095f50cc1
+    deploy_triplet_override: null
+    custom_runtime_config: null
+
+firesim_rocket_nPMP256_nSID64_nMD63_pipeline0_1-22:
+    agfi: agfi-0ae229c5a5a64201e
+    deploy_triplet_override: null
+    custom_runtime_config: null
+
+firesim_rocket_nPMP256_nSID64_nMD63_pipeline0_1-22-new:
+    agfi: agfi-0fa2e4467a75a2206
+    deploy_triplet_override: null
+    custom_runtime_config: null
+
+# can work
+firesim_rocket_nPMP256_nSID64_nMD63_pipeline1_1-22:
+    agfi: agfi-0c121d6e6b575bca4
+    deploy_triplet_override: null
+    custom_runtime_config: null
+# can work, 去掉cam映射 卡死
+firesim_rocket_nPMP256_nSID64_nMD63_pipeline1_1-23:
+    agfi: agfi-0e89f756d782bcbf4
     deploy_triplet_override: null
     custom_runtime_config: null
 
